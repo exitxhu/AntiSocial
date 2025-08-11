@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace CommentService.Controllers;
 
@@ -6,14 +6,9 @@ namespace CommentService.Controllers;
 [Route("[controller]")]
 public class CommentController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+    private readonly ILogger<PostController> _logger;
 
-    private readonly ILogger<CommentController> _logger;
-
-    public CommentController(ILogger<CommentController> logger)
+    public CommentController(ILogger<PostController> logger)
     {
         _logger = logger;
     }
