@@ -1,0 +1,6 @@
+@AntiSocial_HostAddress = http://localhost:5168
+
+GET {{AntiSocial_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
